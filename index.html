@@ -1,0 +1,981 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link rel="stylesheet" type="text/css" href="style.css?42ddd0">
+</head>
+  <body ondragstart="return false;" ondrop="return false;">
+  
+ <!--TITLE -->
+
+	<div id="titleDiv">
+		<div id="tosscroll">
+		<p id="tostitle">READ THIS:</p>
+		<p id="tos">
+	By using Meetup.cam you agree to the following terms: Do not use Meetup.cam if you are under 18.
+	Do not transmit nudity, sexually harass anyone, publicize other peoples' private information, make statements that defame or libel anyone, violate intellectual property rights, 
+	use automated programs to start chats, or behave in any other inappropriate or illegal way on Meetup.cam. Understand that human behavior is fundamentally uncontrollable, that the 
+	people you encounter on Meetup.cam may not behave appropriately, and that they are solely responsible for their own behavior. Use Meetup.cam at your own discretion. Click skip if 
+	anyone makes you feel uncomfortable. You may be denied access to Meetup.cam for inappropriate conduct.  
+	 MEETUP.CAM IS PROVIDED AS IS, AND TO THE MAXIMUM EXTENT ALLOWED BY APPLICABLE LAW, IT IS PROVIDED WITHOUT ANY WARRANTY, EXPRESS OR IMPLIED, NOT EVEN A WARRANTY OF MERCHANTABILITY OR 
+	 FITNESS FOR A PARTICULAR PURPOSE. TO THE MAXIMUM EXTENT ALLOWED BY APPLICABLE LAW, THE PROVIDER OF MEETUP.CAM, AND ANY OTHER PERSON OR ENTITY ASSOCIATED WITH MEETUP.CAM'S OPERATION,
+	 SHALL NOT BE HELD LIABLE FOR ANY DIRECT OR INDIRECT DAMAGES ARISING FROM THE USE OF MEETUP.CAM, OR ANY OTHER DAMAGES RELATED TO MEETUP.CAM OF ANY KIND WHATSOEVER.
+		</div>
+		<h1 id="title">Meetup.cam</h1>
+		<div id="explain">
+		<p>Welcome to Meetup.cam
+		<br>
+		<br>*Share videos and music
+		<br>*Draw with a random stranger
+		<br>*Make new friends
+		<br>
+		<br>Click the start button to begin!
+		</div>  
+		<button id="start">Start</button>
+	</div>
+<!--SELECT INPUT -->
+	<div id="selectDiv">
+		<h1 id="selectText">Select your input</h1>	
+		<img  src="camera.png" id="cameraBtn"></img>
+		<h1 id="cameraText">Share your camera.</h1>
+		<img  src="screen.png" id="screenBtn"></img>
+		<h1 id="screenText">Share your screen/window.</h1>
+		<button id="ready">Ready</button>
+		<video autoplay="true" id="yourVideo"></video>
+		<a href="https://secrettree.network" target="_blank">
+			<img  src="secrettree.png" id="secrettree"></img>
+		</a>
+	</div>
+	
+	
+<!--ROOM SELECTION -->
+	<div id="roomDiv">
+		<div id="roomList">
+			<div class='room'>Test 0/16</div> 
+			<div class='room'>TestTwo 0/16</div> 
+			<div class='room'>TestThree 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>Test 0/16</div> 
+			<div class='room'>TestTwo 0/16</div> 
+			<div class='room'>TestThree 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>Test 0/16</div> 
+			<div class='room'>TestTwo 0/16</div> 
+			<div class='room'>TestThree 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+			<div class='room'>TestFour 0/16</div> 
+		</div>
+		<h1 id="roomTitle">Select a room or talk to random people</h1>
+		<div class="button" id="createRoom">Create room</div>
+		<div class="button" id="refresh">Refresh</div>
+		<div class="button" id="random">Talk to random people</div>
+	</div>
+	
+<!--Create Room -->
+	<div id="createDiv">
+			<h1 id="createTitle">Create a room</h1>
+			
+			<p id="roomName">Room Name:</p>
+			<input id="roomNameInput"></input>
+			
+			<p id="roomPrivate">Private?</p>
+			<input type="checkbox" id="roomPrivateCheck" name="private">
+
+			<p id="roomColor">Room Color:</p>			  
+			<input type="color" id="roomColorInput"  value="#383838">
+			  
+			<div class="button" id="create">Create</div>
+			<div class="button" id="back">Back</div>
+	</div>
+	
+	
+<!--MAIN-->
+	<div id="mainDiv">
+		<p id="statusText">Connecting...</p>
+		<div  id="bg"></div>
+		<div id="text">Welcome to Meetup.cam!</div>
+		<textarea id="textEnter">Type here!</textarea>
+		<script src="simplepeer.min.js"></script> 
+		<script src="networking.js?45520"></script>
+		<img  src="other.png" id="otherImg"></img>
+		<video id="theirVideo" autoplay="true"></video>
+		<div id='allVideo'></div>
+		
+		<div id="playerControls">
+			<div class="widget" id="player"></div>
+			<input id="playerInput" value="Paste youtube link here"></input>
+			<input type="submit" class="button" value="Play Video" id="playerSubmit">
+		</div>
+		
+		<div id="drawingStuff">
+			<canvas class="widget" id="drawingBoard"></canvas>
+			
+			<a href="#" id="downloader" onclick="download()" download="image.png">
+			<div class="button" id="saveButton">Save Image</div>
+			</a>
+			
+			<input type="color" id="colorPicker" name="colorPicker" value="#ff0000">
+			<input type="range" min="1" max="10" value="3" class="slider" id="brushSize">
+		</div>
+		
+		<button class="button" id="switchButton">Youtube</button>
+		<button class="button" id="skip">Skip</button>
+
+			
+		<div id="fullContainer">
+			<button class="button" id="theirFull">Full</button>
+			<button class="button" id="yourFull">Full</button>
+		</div>
+	</div>
+	<script src='player.js'></script>
+	<script>
+		
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			mobile=1;
+		}else{
+			mobile=0;
+		}
+			
+	
+		skipStage=0;
+		
+		refresh.onclick=function(){
+			message_send(['get_rooms'])
+		}
+		
+		skip.onclick=function(){
+			if(skipStage==0){
+				skipStage=1;
+				skip.innerHTML='Positive?';
+			}else{
+				skipStage=0;
+				skip.innerHTML='Skip';
+				message_send(['lobby_join']);
+				var scrollDown =0;
+				if( Math.abs(text.scrollTop - (text.scrollHeight+2 - text.offsetHeight))<5){
+					scrollDown=1;
+				}
+				var br = document.createElement("br");
+				text.appendChild(br);
+				var span = document.createElement('span');
+				span.style.color = "orange";
+				var textnode = document.createTextNode("You have skipped.");
+				span.appendChild(textnode);
+				text.appendChild(span);
+				if(scrollDown==1){
+				text.scrollTop = text.scrollHeight;
+				}					
+				//destroy all active peer connections
+				while(peers.length>0){
+					peers[0].peer.destroy();
+					peers.splice(0,1);
+				}
+
+				
+				
+			}
+		}
+		
+	
+		
+	
+	
+		const gdmOptions = {
+		  video: true,
+		  audio: true
+		}
+		
+		function hexToRgb(hex) {
+		  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+		  return result ? {
+			r: parseInt(result[1], 16),
+			g: parseInt(result[2], 16),
+			b: parseInt(result[3], 16)
+		  } : null;
+		}
+		
+
+		function YouTubeGetID(url){
+		  var ID = '';
+		  url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+		  if(url[2] !== undefined) {
+			ID = url[2].split(/[^0-9a-z_\-]/i);
+			ID = ID[0];
+		  }
+		  else {
+			ID = url;
+		  }
+			return ID;
+		}
+		
+		
+		
+		playerInput.onclick=function(){
+			if(playerInput.value='Paste youtube link here'){
+				playerInput.value="";
+			}
+		}
+		
+		playerSubmit.onclick=function(){
+			var videoStr = playerInput.value;
+			playerInput.value="";
+			videoStr = YouTubeGetID(videoStr);
+			player.loadVideoById(videoStr)
+			sendState=0;
+			player.pauseVideo();
+			sendState=1;
+			player_send(['video_id',videoStr]);
+		}
+		
+		var switchBtn = 'Youtube';
+		
+		fadeDrawOpacity = 1.0;
+		
+		fadeDraw = function(){
+			drawingStuff.style.opacity=fadeDrawOpacity;
+			fadeDrawOpacity-=fadeDrawOpacity*0.15+0.001;
+			if(fadeDrawOpacity<=0){
+				drawingStuff.style.opacity=0;
+				drawingStuff.style.display='none';
+				fadeInPlayer();
+			}else{
+				setTimeout(function(){
+					fadeDraw();
+				},20);
+			}
+		}
+		
+		fadeInPlayer = function(){
+			playerControls.style.display='initial';
+			playerControls.style.opacity=fadeDrawOpacity;
+			fadeDrawOpacity+=fadeDrawOpacity*0.15+0.001;
+			if(fadeDrawOpacity>=1){
+				playerControls.style.opacity=1;
+			}else{
+				setTimeout(function(){
+					fadeInPlayer();
+				},20);
+			}
+		}
+		download=function(){
+			document.getElementById("downloader").download = "image.png";
+			document.getElementById("downloader").href = document.getElementById("drawingBoard").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+		}
+		
+		downloader.onclick=function(){
+			download();
+		}
+
+		
+		fadePlayer = function(){
+		playerControls.style.opacity=fadeDrawOpacity;
+		fadeDrawOpacity-=fadeDrawOpacity*0.15+0.001;
+		if(fadeDrawOpacity<=0){
+			playerControls.style.opacity=0;
+			playerControls.style.display='none';
+			fadeInDraw();
+		}else{
+			setTimeout(function(){
+				fadePlayer();
+			},20);
+		}
+	}	
+	
+		fadeInDraw = function(){
+			drawingStuff.style.display='initial';
+			drawingStuff.style.opacity=fadeDrawOpacity;
+			fadeDrawOpacity+=fadeDrawOpacity*0.15+0.001;
+			if(fadeDrawOpacity>=1){
+				drawingStuff.style.opacity=1;
+			}else{
+				setTimeout(function(){
+					fadeInDraw();
+				},20);
+			}
+		}
+		
+		
+		switchButton.onclick=function(){
+			if(switchBtn == 'Youtube'){
+				if(parseInt(mainDiv.style.opacity) >= 1){
+					fadeDraw();
+					switchBtn='Draw';
+					switchButton.innerHTML='Draw';
+				}
+			}else{
+				if(parseInt(mainDiv.style.opacity) >= 1){
+					fadePlayer();
+					switchBtn='Youtube';
+					switchButton.innerHTML='Youtube';
+				}
+			}
+		}
+
+		function resizeThis(){
+		
+		var drawX = drawingBoard.height/drawingBoard.width;
+		var drawXMod = drawX*0.75
+		
+			//Landscape
+			if(window.innerWidth>window.innerHeight){
+
+				var aspect =(window.innerHeight/window.innerWidth)/0.5067
+				aspect*=aspect;
+				
+				if(aspect>1){
+					aspect=1;
+				}
+				
+				var useWidth = window.innerWidth;
+	
+	
+		
+				drawingBoard.style.width = (useWidth*0.75)*aspect+'px';
+				drawingBoard.style.height= (useWidth*drawXMod)*aspect+'px';
+				player.f.width = (useWidth*0.75)*aspect;
+				player.f.height= (useWidth*drawXMod)*aspect;		
+				
+				if(aspect<0.5){
+					aspect=0.5;
+				}
+
+				var left = 24/aspect;
+					drawingBoard.style.left=left+'%'
+					player.f.style.left=left+'%'
+			
+			//Portrait
+			}else{
+				drawingBoard.style.left='0%';
+				player.f.style.left='0%';
+				drawingBoard.style.width = window.innerWidth+'px';
+				drawingBoard.style.height= window.innerWidth*drawX+'px';		
+				player.f.width = window.innerWidth;
+				player.f.height= window.innerWidth*drawX*1.3;		
+						
+			}
+			
+			/*if(readied==1){
+				
+				if(window.innerHeight<400){
+					if(switchBtn=='Youtube'){
+					drawingStuff.style.display='none';
+					}else{
+					playerControls.style.display='none';
+					}
+					switchButton.style.display='none';
+				}else{
+					if(switchBtn=='Youtube'){
+					drawingStuff.style.display='initial';
+					}else{
+					playerControls.style.display='initial';
+					}
+					switchButton.style.display='initial';
+				}
+			}*/
+		}
+		
+		
+		yourFull.onclick=function(){
+			yourVideoReal.requestFullscreen();
+		}
+		theirFull.onclick=function(){
+			theirVideo.requestFullscreen();
+		}
+
+		window.onresize = function(){
+				resizeThis();
+		}
+
+		
+		mouseX=0;
+		mouseY=0;
+		clicking=0;
+		//const canvas = document.getElementById('drawingBoard');
+		const ctx = drawingBoard.getContext('2d');		
+		drawingBoard.width=1100;
+		drawingBoard.height=350;
+		ctx.fillStyle = 'white';
+		ctx.fillRect(0, 0, 4000, 4000);
+		pixelSend=[];
+		var id = ctx.createImageData(1,1); // only do this once per page
+		var d  = id.data;                        // only do this once per page
+		d[3]=255;
+		paint=function(r,g,b,xx,yy,self,size){
+			ctx.fillStyle = 'rgb('+r+','+g+','+b+')';
+			ctx.strokeStyle = ctx.fillStyle;
+			ctx.beginPath();
+			ctx.arc(xx, yy, size, 0, 2 * Math.PI, false);
+			ctx.fill();
+			ctx.lineWidth = 5;
+			ctx.stroke();			
+
+		}
+		setInterval(function(){
+			if(pixelSend.length>0){
+				//var sendObj = pako.deflate(JSON.stringify(pixelSend), { to: 'string' });
+				peer_sendData(JSON.stringify([1,pixelSend.shift()]));
+			}
+		},20);
+		function rgbToHex(r, g, b) {
+			if (r > 255 || g > 255 || b > 255)
+				throw "Invalid color component";
+			return ((r << 16) | (g << 8) | b).toString(16);
+		}
+		
+		
+		tween_cursor=function(x0, y0, x1, y1,self,color,brushSizeVar) {
+			x0=Math.round(x0);y0=Math.round(y0);x1=Math.round(x1);y1=Math.round(y1);
+			
+		
+			if(self==1){
+				brushSizeVar = (parseInt(brushSize.value)*parseInt(brushSize.value)*0.5)+1		
+				color = hexToRgb(colorPicker.value);	
+				pixelSend.push([x0, y0, x1, y1,color,brushSizeVar]);
+			}
+		   var dx = Math.abs(x1 - x0);
+		   var dy = Math.abs(y1 - y0);
+		   var sx = (x0 < x1) ? 1 : -1;
+		   var sy = (y0 < y1) ? 1 : -1;
+		   var err = dx - dy;
+
+		   while(true) {
+			  //setPixel(x0, y0); // Do what you need to for this
+				paint(color.r,color.g,color.b,x0,y0,1,brushSizeVar);
+			  if ((x0 === x1) && (y0 === y1)) break;
+			  var e2 = 2*err;
+			  if (e2 > -dy) { err -= dy; x0  += sx; }
+			  if (e2 < dx) { err += dx; y0  += sy; }
+		   }
+		}
+		
+		if(mobile==0){
+			
+			drawingBoard.onmousedown=function(e){	
+				
+				var layerX = e.layerX / (parseInt(drawingBoard.style.width)/(drawingBoard.width));
+				var layerY = e.layerY / (parseInt(drawingBoard.style.height)/(drawingBoard.height));
+
+				mouseX=layerX;
+				mouseY=layerY;
+				
+				if(e.button==0){
+					clicking=1;		
+					var color = hexToRgb(colorPicker.value);
+					//paint(color.r,color.g,color.b,mouseX,mouseY,1,(parseInt(brushSize.value)*parseInt(brushSize.value)*0.5)+1);
+					tween_cursor(mouseX,mouseY,mouseX,mouseY,1);
+				}else{
+					var p = ctx.getImageData(mouseX,mouseY,1,1);
+					var hex = "#" + ("000000" + rgbToHex(p.data[0], p.data[1], p.data[2])).slice(-6);
+					colorPicker.value=hex;
+				}
+			}
+			
+			drawingBoard.onmouseenter = function(e){
+				var layerX = e.layerX / (parseInt(drawingBoard.style.width)/(drawingBoard.width));
+				var layerY = e.layerY / (parseInt(drawingBoard.style.height)/(drawingBoard.height));
+				mouseX=layerX;
+				mouseY=layerY;		
+			}
+			
+
+			
+			
+			drawingBoard.onmousemove=function(e){
+				if(clicking==1){
+					
+					var mouseXG=(e.layerX / (parseInt(drawingBoard.style.width)/(drawingBoard.width)));
+					var mouseYG=(e.layerY / (parseInt(drawingBoard.style.height)/(drawingBoard.height)));
+
+				
+					if(mouseXG < (drawingBoard.width) &&
+					mouseXG > 0 &&
+					mouseYG < (drawingBoard.height) && 
+					mouseYG > 0 ){
+					
+						tween_cursor(mouseX,mouseY,mouseXG,mouseYG,1);
+						mouseX=mouseXG;
+						mouseY=mouseYG;
+						
+						//var color = hexToRgb(colorPicker.value);
+						//paint(color.r,color.g,color.b,mouseX,mouseY,1,(parseInt(brushSize.value)*parseInt(brushSize.value)*0.5)+1);
+					
+					}
+
+				}
+				document.body.onmouseup=function(){
+				clicking=0;
+				}
+			
+			}
+			
+		}else{
+		
+			var touchPos=[0,0];
+
+
+			 drawingBoard.addEventListener("touchstart", function(e){
+
+				touchPos=[
+					(e.touches[0].clientX - drawingBoard.offsetLeft) / (parseInt(drawingBoard.style.width)/(drawingBoard.width)),
+					(e.touches[0].clientY - drawingBoard.offsetTop)/ (parseInt(drawingBoard.style.height)/(drawingBoard.height)),		
+					
+				];
+				tween_cursor(touchPos[0],touchPos[1],touchPos[0],touchPos[1],1);
+			}, false);
+			 drawingBoard.addEventListener("touchmove", function(e){
+
+				var touchPosGoto=[
+					(e.touches[0].clientX - drawingBoard.offsetLeft) / (parseInt(drawingBoard.style.width)/(drawingBoard.width)),
+					(e.touches[0].clientY - drawingBoard.offsetTop)/ (parseInt(drawingBoard.style.height)/(drawingBoard.height)),		
+					
+				];
+				//var color = hexToRgb(colorPicker.value);
+				//paint(color.r,color.g,color.b,touchPos[0],touchPos[1],1,(parseInt(brushSize.value)*parseInt(brushSize.value)*0.5)+1);
+				tween_cursor(touchPos[0],touchPos[1],touchPosGoto[0],touchPosGoto[1],1);
+				touchPos=touchPosGoto;
+			}, false);
+
+		}
+
+
+		yourVideo.muted=true;
+			
+	
+		window.addEventListener('contextmenu', function (e) { 
+		  e.preventDefault(); 
+		}, false);
+	
+		textEnter.addEventListener('keydown', function (e) { 
+			if(e.key=='Enter' && textEnter.value!='Type here!' && textEnter.value!=''){
+				e.preventDefault();
+				var scrollDown =0;
+				if( Math.abs(text.scrollTop - (text.scrollHeight+2 - text.offsetHeight))<5){
+					scrollDown=1;
+				}
+
+				peer_sendData(JSON.stringify([0,textEnter.value]));
+
+				var br = document.createElement("br");
+				text.appendChild(br);
+				var span = document.createElement('span');
+				span.style.color = "blue";
+				var textnode = document.createTextNode("You: ");
+				span.appendChild(textnode);
+				text.appendChild(span);
+				textnode = document.createTextNode(textEnter.value);
+				text.appendChild(textnode);
+				textEnter.setSelectionRange(0,0);
+				textEnter.value="";
+				textEnter.focus();
+				if(scrollDown==1){
+					text.scrollTop = text.scrollHeight;
+				}
+			}
+		}, false);
+	
+	
+		captureStream=null;
+		var opacity=1;
+		var videoOpacity=0;
+	
+		function videoOpacityAdd(){
+			yourVideo.style.opacity=videoOpacity;
+			videoOpacity+=videoOpacity*0.12+0.01;
+			if(videoOpacity>=1){
+				yourVideo.style.opacity=1;
+			}else{
+				setTimeout(function(){
+					videoOpacityAdd();
+				},20);
+			}
+		}
+		
+		theirVideo.onclick=function(e){
+			e.preventDefault();
+			if(document.fullscreenElement!=theirVideo){
+				if ('pictureInPictureEnabled' in document) {
+					theirVideo.requestPictureInPicture();
+				}else{
+					theirVideo.requestFullscreen();
+				}
+			}
+		}
+		
+		textEnter.onclick=function(){
+			if(textEnter.innerHTML=='Type here!'){
+				textEnter.innerHTML='';
+			}
+		}
+
+		
+		screenBtn.onclick=function(){
+			if(captureStream!=null){
+				captureStream.getTracks()[0].stop();
+				captureStream=null;
+			}
+			selectText.style.display='none';
+			yourVideo.style.display='initial';
+			yourVideo.style.opacity=0;
+			
+const gdmOptions = {
+  video: true,
+  audio: true
+}
+			navigator.mediaDevices.getDisplayMedia(gdmOptions).then(function (stream) {
+				captureStream = stream;
+				yourVideo.srcObject=stream;
+				videoOpacityAdd();
+			})
+			screenBtn.src='screenSelect.png';
+			cameraBtn.src='camera.png';
+		}
+		cameraBtn.onclick=function(){
+			if(captureStream!=null){
+				captureStream.getTracks()[0].stop();
+				captureStream=null;
+			}
+			selectText.style.display='none';
+			yourVideo.style.display='initial';
+			yourVideo.style.opacity=0;
+			navigator.mediaDevices.getUserMedia(gdmOptions).then(function (stream) {
+				captureStream = stream;
+				yourVideo.srcObject=stream;
+				videoOpacityAdd();
+			})
+			cameraBtn.src='cameraSelect.png';
+			screenBtn.src='screen.png';
+		}
+		readied=0;
+		ready.onclick=function(){
+			readied=1;
+			if(captureStream==null){
+				selectText.style.display='initial';
+				//yourVideo.style.display='none';
+				selectText.innerHTML="You must select a video source to continue.";
+				selectText.style.fontSize='20px';
+			}else{
+				if(elevation!=2){
+					selectText.style.display='initial';
+					//yourVideo.style.display='none';
+					selectText.innerHTML="Please wait for connection.";
+					selectText.style.fontSize='25px';				
+				}else{
+					if(captureStream.active==true){
+						if(window.location.hash==""){
+							fadeOut();
+							message_send(['get_rooms'])
+						}else{
+							message_send(['room_join',window.location.hash]);
+							fadeOutRedundantTwo();
+						}
+					}
+				}
+			}
+		}
+		
+		function fade(){
+			titleDiv.style.opacity=opacity;
+
+			opacity-=opacity*0.12;
+			if(opacity<=0.01){
+				titleDiv.style.display='none';
+				titleDiv.remove();
+				selectDiv.style.display='initial'
+				selectDiv.style.opacity=0;		
+				fadeIn();
+			}else{
+				setTimeout(function(){
+					fade();
+				},20);
+			}
+		}
+		
+		function fadeIn(){
+			selectDiv.style.opacity=opacity;
+			opacity+=opacity*0.15+0.001;
+			if(opacity>=1){
+				selectDiv.style.opacity=1
+			}else{
+				setTimeout(function(){
+					fadeIn();
+				},20);
+			}	
+		}
+
+		function fadeOut(){
+			selectDiv.style.opacity=opacity;
+			opacity-=opacity*0.15+0.001;
+			if(opacity<=0){
+				selectDiv.style.opacity=0
+				//create real video element
+				yourVideo.id='yourVideoReal';
+				yourVideoReal.muted=true;
+				yourVideoReal.autoplay=true;
+				
+	
+				yourVideoReal.onclick=function(e){
+					e.preventDefault();
+					yourVideoReal.play();
+					if(document.fullscreenElement!=yourVideoReal){
+						if ('pictureInPictureEnabled' in document) {
+							yourVideoReal.requestPictureInPicture();
+						}else{
+							yourVideoReal.requestFullscreen();
+						}
+					}
+				}
+				mainDiv.appendChild(yourVideoReal);
+				selectDiv.remove();
+				fadeInFinal();
+				roomDiv.style.display='initial';
+				roomDiv.style.opacity=0;
+			}else{
+				setTimeout(function(){
+					fadeOut();
+				},20);
+			}		
+		}
+
+
+		function fadeOutRedundantTwo(){
+			selectDiv.style.opacity=opacity;
+			opacity-=opacity*0.12;
+			if(opacity<=0.01){
+				selectDiv.style.opacity=0
+				//create real video element
+				yourVideo.id='yourVideoReal';
+				yourVideoReal.muted=true;
+				yourVideoReal.autoplay=true;
+				
+	
+				yourVideoReal.onclick=function(e){
+					e.preventDefault();
+					yourVideoReal.play();
+					if(document.fullscreenElement!=yourVideoReal){
+						if ('pictureInPictureEnabled' in document) {
+							yourVideoReal.requestPictureInPicture();
+						}else{
+							yourVideoReal.requestFullscreen();
+						}
+					}
+				}
+				mainDiv.appendChild(yourVideoReal);
+				selectDiv.remove();
+				mainDiv.style.display='initial'
+				mainDiv.style.opacity=0;		
+				fadeInMain();
+			}else{
+				setTimeout(function(){
+					fadeOutRedundantTwo();
+				},20);
+			}
+		}		
+
+
+		function fadeInFinal(){
+			roomDiv.style.opacity=opacity;
+			opacity+=opacity*0.15+0.001;
+			if(opacity>=1){
+				roomDiv.style.opacity=1
+				opacity=1;
+			}else{
+				setTimeout(function(){
+					fadeInFinal();
+				},20);
+			}
+		}
+		start.onclick=function(){
+			fade();
+		}
+		
+		
+		createRoom.onclick=function(){
+			fadeOutRoom();
+		}
+		
+		function fadeOutRoom(){
+			roomDiv.style.opacity=opacity;
+
+			opacity-=opacity*0.12;
+			if(opacity<=0.01){
+				roomDiv.style.display='none';
+				createDiv.style.display='initial'
+				createDiv.style.opacity=0;		
+				fadeInCreate();
+			}else{
+				setTimeout(function(){
+					fadeOutRoom();
+				},20);
+			}
+		}
+		
+		function fadeInCreate(){
+			createDiv.style.opacity=opacity;
+			opacity+=opacity*0.15+0.001;
+			if(opacity>=1){
+				createDiv.style.opacity=1
+			}else{
+				setTimeout(function(){
+					fadeInCreate();
+				},20);
+			}	
+		}
+		
+		back.onclick = function(){
+			fadeOutCreate();
+		}
+		
+		function fadeOutCreate(){
+			createDiv.style.opacity=opacity;
+
+			opacity-=opacity*0.12;
+			if(opacity<=0.01){
+				createDiv.style.display='none';
+				roomDiv.style.display='initial'
+				roomDiv.style.opacity=0;		
+				fadeInFinal();
+			}else{
+				setTimeout(function(){
+					fadeOutCreate();
+				},20);
+			}
+		}
+		
+		create.onclick=function(){
+			message_send(['room_create',roomNameInput.value,roomPrivateCheck.checked,roomColorInput.value]);
+			fadeOutCreateTwo();
+		}
+		
+		function fadeOutCreateTwo(){
+			createDiv.style.opacity=opacity;
+
+			opacity-=opacity*0.12;
+			if(opacity<=0.01){
+				createDiv.style.display='none';
+				mainDiv.style.display='initial'
+				mainDiv.style.opacity=0;		
+				fadeInMain();
+			}else{
+				setTimeout(function(){
+					fadeOutCreateTwo();
+				},20);
+			}
+		}
+		
+		random.onclick=function(){
+			mode="random";
+			fadeOutRedundant();
+			message_send(['lobby_join']);
+		}
+		
+		function fadeOutRedundant(){
+			roomDiv.style.opacity=opacity;
+			opacity-=opacity*0.12;
+			if(opacity<=0.01){
+				roomDiv.style.display='none';
+				mainDiv.style.display='initial'
+				mainDiv.style.opacity=0;		
+				fadeInMain();
+			}else{
+				setTimeout(function(){
+					fadeOutRedundant();
+				},20);
+			}
+		}
+
+		var finalFade=0;
+		fadeInMain=function(){
+			
+			if(finalFade==0){
+				if(mode!='random'){
+					var ele = document.createElement("video");
+					ele.classList.add("videoContainer");
+					ele.srcObject = captureStream
+					allVideo.appendChild(ele);
+					ele.style.width='500px';
+					ele.style.height='500px';
+					ele.play();
+					ele.muted=true;
+					skip.remove();
+					fullContainer.remove();
+					ele.onmousedown=function(e){
+						switch(e.button){
+							//left
+							case 0:
+								if ('pictureInPictureEnabled' in document){
+									ele.requestPictureInPicture();
+								}
+							break;
+							//right
+							case 2:
+								ele.requestFullscreen();
+							break;
+						}
+					}
+					yourVideoReal.remove();
+					otherImg.remove();
+				}else{
+					allVideo.remove();
+				}
+				finalFade=1;
+			}
+		
+		
+			mainDiv.style.opacity=opacity;
+			drawingStuff.style.opacity=opacity;
+			opacity+=opacity*0.15+0.001;
+			if(opacity>=1){
+				mainDiv.style.opacity=1
+				drawingStuff.style.opacity=1;
+			}else{
+				setTimeout(function(){
+					fadeInMain();
+				},20);
+			}	
+		}
+		
+	</script>
+	
+
+
+  </body>
+</html>

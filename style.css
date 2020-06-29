@@ -1,0 +1,940 @@
+	@font-face {
+	  font-family: "Impact";
+	  
+	}
+	
+
+	
+	.videoContainer {
+		min-height:100%;
+	}
+	
+	#roomName {
+		font-family: magical;
+		color : white;
+		position:absolute;
+		font-size:22px;
+		text-align: center;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		left:20%;
+		top:15%;
+	}
+	
+
+	
+	#roomNameInput {
+		position:absolute;
+		top:15%;
+		left:60%;
+		-ms-transform: translate(0%, 75%);
+		transform: translate(0%, 75%);
+	}
+	
+	#roomPrivate {
+		font-family: magical;
+		color : white;
+		position:absolute;
+		font-size:22px;
+		text-align: center;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		left:20%;
+		top:25%;
+	}
+	
+
+	#roomPrivateCheck{
+		position:absolute;
+		top:25%;
+		left:60%;
+		-ms-transform: translate(0%, 75%);
+		transform: translate(0%, 75%);		
+	}
+	
+	#roomColorInput {
+		position:absolute;
+		top:40%;
+		left:60%;
+		-ms-transform: translate(0%, 75%);
+		transform: translate(0%, 75%);
+	}
+	
+	#roomColor {
+		font-family: magical;
+		color : white;
+		position:absolute;
+		font-size:22px;
+		text-align: center;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		left:20%;
+		top:40%;
+	}
+	
+	
+	
+	#createDiv {
+		display:none;
+	}
+
+	#roomTitle { 
+		position: absolute;
+		background-color: rgba(150,150,150,0.1);
+		font-family: magical;
+		color : white;
+		left:50%;
+		top: 4%;
+		text-align: center;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		z-index:10;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+	#createTitle { 
+		position: absolute;
+		background-color: rgba(150,150,150,0.1);
+		font-family: magical;
+		color : white;
+		left:50%;
+		top: 4%;
+		text-align: center;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		z-index:10;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+	#roomList {
+	position:absolute;
+    border: 10px ridge rgba(20,20,20,0.2);
+    background-color: rgb(40,40,40);
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+	width:50%;
+	left:23%;
+	top:20%;
+	height:60%;
+	overflow-y:auto;
+	}
+	
+	#refresh {
+		top:15%;
+		left:48%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}	
+	
+	#createRoom{
+		left:3%;
+		top:90%;
+	}
+	#random{
+		right:3%;
+		top:90%;
+	}
+	
+	#back{
+		left:3%;
+		top:90%;
+	}
+	#create{
+		right:3%;
+		top:90%;
+	}
+	
+	.room {
+		drop-shadow(32px 32px 10px black);
+		border-radius:2px;
+		font-family: Verdana;
+		text-align: center;
+		background-color: rgb(90,90,90);
+		border : none;
+		padding: 5px 16px;
+		color : white;
+		font-size:15px;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000,
+					-1px -1px 0 #000;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);		
+	border-style: solid;	
+	border-color:black;
+	}
+	
+	.room:hover{
+		border-width:5px;!important;	
+		filter: brightness(85%) !important;
+	}
+	
+	
+	body {
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+	
+	#mainDiv {
+		display: none;
+	}
+	
+	#selectDiv {
+		display:none;
+	}
+	
+	#roomDiv {
+		display:none;
+	}
+
+	
+	@keyframes float {
+		0% {
+			box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+			transform: translatey(0px);
+		}
+		50% {
+			box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+			transform: translatey(-20px);
+		}
+		100% {
+			box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+			transform: translatey(0px);
+		}
+	}
+	body {
+		background-image: url("galaxy.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+	}
+	#tostitle{
+		color:red;
+	}
+	#tosscroll{
+		z-index:10;
+		position:absolute;
+		overflow-y:auto;
+		height:20%;
+		background-color:rgba(200,200,200,0.5);
+	}
+	body, .widget, textEnter, text{
+
+		touch-action: none;
+		-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+	}
+	@font-face {
+	  font-family: conform;
+	  src: url(PLG.ttf);
+	}
+	
+	#skip {
+		background-color: rgb(255,0,0);
+		position:absolute;
+	}
+	
+	#skip:hover {
+		background-color: rgb(220,0,0);
+		position:absolute;
+	}
+	
+	#colorPicker{
+		position:absolute;
+	}
+	#brushSize{
+		position:absolute;
+		width:90px;
+		height:16px;
+	}
+	
+	.button {
+		drop-shadow(32px 32px 10px black);
+		border-radius:5px;
+		position: absolute;
+		font-family: Verdana;
+		text-align: center;
+		background-color: rgb(90,90,90);
+		border : none;
+		padding: 5px 16px;
+		color : white;
+		font-size:15px;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000,
+					-1px -1px 0 #000;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);		
+	}
+	
+	.button:hover {
+		background-color: rgb(120,120,120);		
+	}
+	
+	
+	.widget {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+		position:absolute;
+		top:5%;
+		left:5%;
+		box-shadow:         inset 0 0 20px #000000;
+	}
+	
+	#playerControls{
+		display:none;
+	}
+	
+		
+	/* The slider itself */
+	.slider {
+	  -webkit-appearance: none;  /* Override default CSS styles */
+	  appearance: none;
+	  height: 25px; /* Specified height */
+	  background: #d3d3d3; /* Grey background */
+	  outline: none; /* Remove outline */
+	  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+	  transition: opacity .2s;
+		border-radius: 5px; 
+	}
+
+	/* Mouse-over effects */
+	.slider:hover {
+	  opacity: 1; /* Fully shown on mouse-over */
+	}
+
+	/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+	.slider::-webkit-slider-thumb {
+	  -webkit-appearance: none; /* Override default look */
+	  appearance: none;
+	  width: 25px; /* Set a specific slider handle width */
+	  height: 25px; /* Slider handle height */
+	  background: #5C5C5C; /* Green background */
+	  cursor: pointer; /* Cursor on hover */
+	}
+
+	.slider::-moz-range-thumb {
+	  width: 25px; /* Set a specific slider handle width */
+	  height: 25px; /* Slider handle height */
+	  background: #5C5C5C; /* Green background */
+	  cursor: pointer; /* Cursor on hover */
+	}
+	
+	
+	video::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-play-button, video::-webkit-media-controls-pausebutton {
+		display: none;
+	}	
+	::-webkit-scrollbar {
+	  width: 20px;
+	  height: 20px;
+	}
+	::-webkit-scrollbar-button {
+	  width: 0px;
+	  height: 0px;
+	}
+	::-webkit-scrollbar-thumb {
+	  background: #ababab;
+	  border: 0px none #000000;
+	  border-radius: 50px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+	  background: #949494;
+	}
+	::-webkit-scrollbar-thumb:active {
+	  background: #4f4f4f;
+	}
+	::-webkit-scrollbar-track {
+	  background: #383838;
+	  border: 0px none #545454;
+	  border-radius: 19px;
+	}
+	::-webkit-scrollbar-track:hover {
+	  background: #383838;
+	}
+	::-webkit-scrollbar-track:active {
+	  background: #383838;
+	}
+	::-webkit-scrollbar-corner {
+	  background: transparent;
+	}
+	img {
+		user-drag: none; 
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		image-rendering: pixelated;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: crisp-edges;
+	}
+	#statusText {
+		position:absolute;
+		right:3%;
+		top:3%;
+		color:rgb(255,0,0);
+		font-weight: bold;
+		font-size:23px;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		z-index: 1;
+		-ms-transform: translate(0, -50%);
+		transform: translate(0, -50%);
+
+	}
+	#yourVideo {
+		position:absolute;
+		left:50%;
+		-ms-transform: translate(-50%, -5%);
+		transform: translate(-50%, -5%);
+		width:70vw;
+		height:45vh;
+		z-index: -10;
+		
+	}
+	
+	#yourVideoReal {
+		position:fixed;
+		-ms-transform: translate(0%, 0%);
+		transform: translate(0%, 0%);
+	}
+	
+	#theirVideo {
+		position:fixed;
+		-ms-transform: translate(-100%, 0%);
+		transform: translate(-100%, 0%);
+	}
+	
+	#otherImg {
+		z-index:-1;
+		position:fixed;
+		-ms-transform: translate(-100%, 0%);
+		transform: translate(-100%, 0%);
+		
+	}
+	#cameraBtn {
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+		position:fixed;
+		top:50%;
+		left:80%;		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	#cameraText {
+		visibility: hidden;
+		position:fixed;
+		top:70%;
+		left:50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);		
+		text-align: center;
+		font-family: magical;
+		color : white;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+	}
+	#cameraBtn:hover {
+		border-width: 2px;
+		border-style: solid;
+	}
+	#cameraBtn:hover + #cameraText {
+		visibility: visible;
+	}
+	#screenBtn {
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+		position:fixed;
+		top:50%;
+		left:20%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	#screenText {
+		visibility: hidden;
+		position:absolute;
+		top:70%;
+		left:50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);	
+		text-align: center;
+		font-family: magical;
+		color : white;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+	}
+	#screenBtn:hover {
+		border-width: 2px;
+		border-style: solid;
+	}
+	#screenBtn:hover + #screenText {
+		visibility: visible;
+	}
+	p {
+	  line-height: 1.0;
+	}
+	#text {
+		z-index=-1;
+		scrollbar-color: dark;
+		overflow-y: auto;		
+		word-wrap:break-word;
+		padding:15px;
+		position:fixed;
+		background-color:rgba(100,100,100,0.3);
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		color:white;
+		text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000;
+				-1px -1px 0 #000;
+		box-shadow:         inset 0 0 20px #000000;
+
+	}
+	#textEnter {
+		z-index=5;
+		user-select:none;
+		position:fixed;
+		background-color:rgba(70,70,70,0.3);
+		border-width: 2px;
+		border-color: black;
+		color:white;
+		text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000;
+				-1px -1px 0 #000;
+		box-shadow:         inset 0 0 20px #000000;
+
+	}
+	#secrettree { 
+		position: absolute;
+		-ms-transform: translate(-100%, -100%);
+		transform: translate(-100%, -100%);
+		top : 100%;
+		left : 100%;
+	}
+	#title { 
+	animation: float 6s ease-in-out infinite;
+		position: sticky;
+		background-color: rgba(150,150,150,0.1);
+		font-family: magical;
+		color : white;
+		left:50%;
+		top: 4%;
+		text-align: center;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		z-index:10;
+
+	}
+	
+	#selectText { 
+		font-family: magical;
+		color : white;
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000;
+					-1px -1px 0 #000;
+		position:absolute;
+		left:50%;
+		top:4%;
+		text-align: center;
+		-ms-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+
+	}
+	
+	
+	#explain {
+		drop-shadow(16px 16px 10px black);
+		font-family: magical;
+		color :white;
+		text-align: center;
+		background-color : rgba(75,75,75,0.7);
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000,
+					-1px -1px 0 #000;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+		
+	}
+	
+	#start {
+		position:absolute;
+		drop-shadow(32px 32px 10px black);
+		border-radius:15px;
+		font-family: Verdana;
+		text-align: center;
+		background-color: rgb(60,60,60);
+		border : none;
+		padding: 15px 32px;
+		color : white;
+		-ms-transform: translate(-50%, 55%);
+		transform: translate(-50%, 55%);
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000,
+					-1px -1px 0 #000;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+	}
+	#bg {
+     background-image: url('bg.jpg');  
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+	 width:100%;
+	 height:100%;
+	 top:0px;
+	 left:0px;
+	 position:absolute;
+	 z-index:-50;
+	}
+	#ready {
+		drop-shadow(32px 32px 10px black);
+		border-radius:15px;
+		position: absolute;
+		font-family: Verdana;
+		text-align: center;
+		background-color: rgb(60,60,60);
+		border : none;
+		padding: 15px 32px;
+		color : white;
+		left: 50%;
+		font-size:25px;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		text-shadow: -1px 1px 0 #000,
+					  1px 1px 0 #000,
+					 1px -1px 0 #000,
+					-1px -1px 0 #000;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+	}	
+	#start:hover {
+		background-color: rgb(80,80,80);
+	}
+	#ready:hover {
+		background-color: rgb(80,80,80);
+	}
+	body {
+
+		background-color: rgb(115,115,115);
+	}
+	
+	#yourFull{
+		position:absolute;
+		z-index:5;
+	}
+	
+	
+	#fullContainer {
+		opacity:0.35;
+		z-index:5;
+		position:relative;
+	}
+	
+	#fullContainer:hover{
+		opacity:1.0;
+	}
+	
+	#theirFull {
+		position:absolute;
+	}
+	#switchButton {
+		position:absolute;
+	}
+	#downloader {
+		position:absolute;
+	}
+	#saveButton{
+		width:91px;
+	}
+	#playerInput {
+		position:absolute;
+		font-size:14px;
+	}
+	#playerSubmit {
+		position:absolute;
+	}
+	#tosscroll {
+		top:80%;
+	}
+	
+
+	
+	
+	@media screen and (orientation:landscape) {
+		
+		#allVideo {
+			display: inline-block;
+			position:absolute;
+			top:-11%;
+			left:23%;
+			overflow-y:hidden;
+			overflow-x:scroll;
+			white-space: nowrap;
+			width:77%;
+			height:50%;
+		}
+		
+		#text {
+			font-size:18px;
+			left:0%;
+			height:calc(100% - 91px);
+			width:20%;
+			top:0%;	
+		}
+		
+		
+		
+		#textEnter {
+			font-size:18px;
+			left:0%;
+			bottom:0%;
+			height:64px;
+			width:100%;
+			resize: none;
+		}
+		#start{
+			font-size: 3vw;
+			left:50%;
+			top:50%;
+		}
+		#ready {
+			top:85%;
+			left:50%;
+
+		}
+		#explain {
+			font-size: 4vh;
+			left : 50%;
+		}
+		
+		#title {
+			font-size: 4.3vw;
+		}
+		#selectText { 
+			font-size: 3.0vw;
+		}
+		#cameraBtn {
+			width:15vw;
+			height:15vw;
+		}
+		#screenBtn {
+			width:15vw;
+			height:15vw;			
+		}
+		#yourVideo {
+			top:10%;
+		}
+
+		#yourFull {
+			top:1%;
+			left:25%;
+		}
+
+		
+		#theirFull {
+			top:1%;
+			right:0px;
+		}
+		
+		#theirVideo{
+			width:35vw;
+			left:100%;
+			top:1%;
+			max-height:35%;
+		}
+		#otherImg{
+			width:10vw;
+			height:20vh;
+			left:100%;
+			top:1%;			
+		}
+		
+		#yourVideoReal{
+			width:35vw;
+			left:25%;
+			top:1%;
+			max-height:35%;
+		}
+		
+		.widget{
+			top:46%;
+			left:24%;
+		}
+	
+
+
+
+	}
+	
+	@media screen and (orientation:landscape)  {
+		#skip {
+			right:30%;
+			top:0%;
+		}
+		#switchButton{
+			left:25%;
+			top:40%;
+		}
+		#downloader{
+			left:42%;
+			top:40%;
+		}
+		#playerInput{
+			top:40%;
+			left:50%;
+		}
+		#playerSubmit{
+			top:40%;
+			left:70%;
+		}		
+		#colorPicker{
+			top:40%;
+			right:3%;
+		}
+		#brushSize{
+			top:40%;
+			right:30%;
+		}
+	}
+
+
+
+	
+	
+	@media screen and (orientation:portrait) {
+		#skip {
+			left:50%;
+			top:4%;
+		}
+		#text {
+			font-size:3.2vh;
+			left:0%;
+			bottom:6vh;
+			height:12%;
+			width:calc(100% - 30px);			
+		}
+		
+		#textEnter {
+			font-size:3.2vh;
+			left:0%;
+			bottom:0%;
+			height:6vh;
+			width:100%;
+			resize: none;
+		}
+		#start{
+			font-size: 6vh;
+			left:50%;	
+			top:59%;
+		}
+		#ready {
+			top:90%;
+		}
+		#explain {
+			font-size: 4vh;
+			left : 50%;
+		}
+		#title {
+			font-size: 7.3vh;
+		}
+		#selectText {
+			font-size: 4.3vh;
+		}
+		#cameraBtn {
+			width:15vh;
+			height:15vh;
+		}
+		#screenBtn {
+			width:15vh;
+			height:15vh;			
+		}
+		#yourVideo {
+			top:1%;
+		}
+		#yourVideoReal{
+			width:47vw;
+			
+			left:0%;
+			top:1%;			
+		}
+		#theirVideo{
+			width:47vw;
+			
+			left:100%;
+			top:1%;			
+		}
+		#theirFull {
+			top:1%;
+			right:0px;
+		}
+		#yourFull {
+			top:1%;
+			left:0px;
+		}
+		#otherImg{
+			width:30vw;
+			height:30vw;	
+			left:100%;
+			top:1%;			
+		}
+		.widget{
+			top:40%;
+			left:0%;
+		}
+		#playerInput{
+			left:2%;
+			top:35%;
+		}
+		#playerSubmit{
+			left:65%;
+			top:35%;
+		}
+		#colorPicker{
+			top:35%;
+			left:3%;
+		}
+		#brushSize{
+			top:35%;
+			right:5%;
+		}
+		#switchButton{
+			left:50%;
+			top:35%;
+		}
+		#downloader{
+			left:20%;
+			top:35%;
+		}
+		#allVideo {
+			display: inline-block;
+			position:absolute;
+			top:-11%;
+			left:0%;
+			overflow-y:hidden;
+			overflow-x:scroll;
+			white-space: nowrap;
+			width:100%;
+			height:45%;
+		}
+	}
