@@ -14,7 +14,7 @@ The server folder contains a server.js file, which can be run in node.js
 node server.js
 ```
 ## Screenshot(s)
-![image](https://github.com/TreeOfSelf/meetup/assets/53889485/3a627adc-9589-42b8-a337-0f4ae59169e8)
+![image](https://hardcoreanarchy.gay/images/meetup.png)
 
 
 
